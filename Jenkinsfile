@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkoout') {
             steps {
-                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: '39a0281c-5ab6-4158-bb33-b7b1aab87117', url: 'https://github.com/akannan1087/myApr2022weekendRepo']]])
+                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'e01db610-54f8-4d91-9b62-2f09bf22a816', url: 'https://github.com/k-chandureddy/CoachDevops.git']])
             }
         }
         
